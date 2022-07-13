@@ -28,3 +28,5 @@ else
     echo 'Fast-forward not possible. Rebasing...'
     git rebase --preserve-merges --stat $remote_branch
 fi
+
+tools/launcher.sh
