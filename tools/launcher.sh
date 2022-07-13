@@ -2,6 +2,7 @@
 
 function run {
     echo 'running'
+    pwd
 }
 
 echo "currently in $pwd"
