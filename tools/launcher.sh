@@ -5,7 +5,7 @@ function run {
         cargo build --release
     fi
     echo 'running'
-    /target/release
+    /target/release/dashboard
 }
 
 function build {
