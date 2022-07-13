@@ -1,8 +1,17 @@
 #!/bin/bash
 
 function run {
+
+    if [ -n '$1' ]then;
+    build
+    fi
     echo 'running'
     cargo run
+}
+
+function build {
+    echo 'building'
+    cargo build --release
 }
 
 echo "currently in $pwd"
@@ -29,4 +38,6 @@ else
     git rebase --preserve-merges --stat $remote_branch
 fi
 
-tools/launcher.sh
+tools/launcher.sh -b
+
+exit 0
