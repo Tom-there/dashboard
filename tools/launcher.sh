@@ -1,13 +1,15 @@
 #!/bin/bash
 
 function run {
+    if "$1"; then
+        cargo build --release
+    fi
     echo 'running'
-    cargo run
+    /target/release/dashboard
 }
 
 function build {
     echo 'building'
-    cargo build --release
 }
 
 echo "currently in $pwd"
