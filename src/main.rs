@@ -1,3 +1,3 @@
 fn main() {
-    println!("updates  world!");
+    println!("updated world!");
 }
