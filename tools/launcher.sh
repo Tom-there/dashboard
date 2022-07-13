@@ -38,6 +38,6 @@ else
     git rebase --preserve-merges --stat $remote_branch
 fi
 
-tools/launcher.sh -b
+tools/launcher.sh b
 
 exit 0
