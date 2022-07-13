@@ -32,7 +32,7 @@ function fetchGit {
         echo 'Fast-forward not possible. Rebasing...'
         git rebase --preserve-merges --stat $remote_branch > /dev/null
     fi
-    $var = 1
+    var=1
     run
 }
 
