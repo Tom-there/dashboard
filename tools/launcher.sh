@@ -2,7 +2,7 @@
 
 function run {
     echo 'running'
-    pwd
+    cargo run
 }
 
 echo "currently in $pwd"
