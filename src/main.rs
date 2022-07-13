@@ -1,3 +1,3 @@
 fn main() {
-    println!("updated world!");
+    println!("first productive code soon?");
 }
