@@ -1,11 +1,6 @@
 #!/bin/bash
 
 function run {
-
-    if "$1"; then
-        build
-    fi
-
     echo 'running'
     cargo run
 }
