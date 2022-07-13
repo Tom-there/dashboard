@@ -9,6 +9,8 @@ function run {
 #    echo 'running'
 #    echo $pwd
 #    /target/release/dashboard
+
+    echo now building
     cargo run
 }
 
@@ -36,7 +38,7 @@ function fetchGit {
     $var = 1
 }
 
-echo "currently in" "$pwd"
+echo "currently in $(pwd)"
 set -e
 
 fetchGit
