@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function run {
-    if $#>0; then
+    if $# > 0; then
         cargo build --release
     fi
     echo 'running'
