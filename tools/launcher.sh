@@ -2,10 +2,10 @@
 
 function run {
 
-    if [ -n '$1' ]
-    then
+    if "$1"; then
         build
     fi
+
     echo 'running'
     cargo run
 }
