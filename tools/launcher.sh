@@ -18,7 +18,7 @@ function fetchGit {
     remote=$(git config branch.$local_branch.remote)
 
     echo "Fetching from $remote..."
-    git fetch $remote
+    git fetch $remote > /dev/null
 
     if git merge-base --is-ancestor $remote_branch HEAD; then
         echo 'Already up-to-date'
@@ -28,10 +28,10 @@ function fetchGit {
 
     if git merge-base --is-ancestor HEAD $remote_branch; then
         echo 'Fast-forward possible. Merging...'
-        git merge --ff-only --stat $remote_branch
+        git merge --ff-only --stat $remote_branch  > /dev/null
     else
         echo 'Fast-forward not possible. Rebasing...'
-        git rebase --preserve-merges --stat $remote_branch
+        git rebase --preserve-merges --stat $remote_branch  > /dev/null
     fi
     $var = 1
 }
