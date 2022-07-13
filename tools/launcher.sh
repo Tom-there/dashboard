@@ -8,11 +8,7 @@ function run {
          cargo build --release
      fi
      echo 'running'
-     target/release/dashboard
-
-    cargo build --release
-
-    
+     target/release/dashboard   
 }
 
 function fetchGit {
@@ -37,11 +33,10 @@ function fetchGit {
         git rebase --preserve-merges --stat $remote_branch > /dev/null
     fi
     $var = 1
+    run
 }
 
 echo "currently in $(pwd)"
 set -e
-
-fetchGit
 
 exit 0
