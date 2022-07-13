@@ -3,15 +3,16 @@
 var = 0
 
 function run {
-#    if $var > 0; then
-#        cargo build --release
-#    fi
-#    echo 'running'
-#    echo $pwd
-#    /target/release/dashboard
+     if $var > 0; then
+        echo now building
+         cargo build --release
+     fi
+     echo 'running'
+     target/release/dashboard
 
-    echo now building
-    cargo run
+    cargo build --release
+
+    
 }
 
 function fetchGit {
@@ -33,7 +34,7 @@ function fetchGit {
         git merge --ff-only --stat $remote_branch  > /dev/null
     else
         echo 'Fast-forward not possible. Rebasing...'
-        git rebase --preserve-merges --stat $remote_branch  > /dev/null
+        git rebase --preserve-merges --stat $remote_branch > /dev/null
     fi
     $var = 1
 }
