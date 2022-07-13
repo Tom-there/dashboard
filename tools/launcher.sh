@@ -1,6 +1,6 @@
 #!/bin/bash
 
-var = 0
+var=0
 
 function run {
      if $var > 0; then
@@ -33,6 +33,6 @@ function fetchGit {
     run
 
 }
-echo "currently in $(pwd)"
+
 set -e
 exit 0
