@@ -7,6 +7,7 @@ function run {
         cargo build --release
     fi
     echo 'running'
+    echo $pwd
     /target/release/dashboard
 }
 
