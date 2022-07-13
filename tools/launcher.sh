@@ -1,5 +1,7 @@
 #!/bin/bash
+
 var = 0
+
 function run {
      if $var > 0; then
         echo now building
@@ -7,6 +9,7 @@ function run {
      fi
      echo 'running'
      target/release/dashboard   
+
 }
 function fetchGit {
     local_branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
@@ -28,6 +31,7 @@ function fetchGit {
     fi
     $var = 1
     run
+
 }
 echo "currently in $(pwd)"
 set -e
