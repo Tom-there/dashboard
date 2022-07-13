@@ -12,10 +12,6 @@ function run {
     cargo run
 }
 
-function build {
-    echo 'building'
-}
-
 function fetchGit {
     local_branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
     remote_branch=$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
@@ -40,7 +36,7 @@ function fetchGit {
     $var = 1
 }
 
-echo "currently in $pwd"
+echo "currently in" "$pwd"
 set -e
 
 fetchGit
