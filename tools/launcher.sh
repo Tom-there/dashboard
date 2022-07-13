@@ -1,10 +1,10 @@
 #!/bin/bash
 
 function run{
-    echo running
+    echo 'running'
 }
 
-echo currently in $pwd
+echo "currently in $pwd"
 set -e
 
 local_branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
