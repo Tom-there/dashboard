@@ -3,12 +3,13 @@
 var = 0
 
 function run {
-    if $var > 0; then
-        cargo build --release
-    fi
-    echo 'running'
-    echo $pwd
-    /target/release/dashboard
+#    if $var > 0; then
+#        cargo build --release
+#    fi
+#    echo 'running'
+#    echo $pwd
+#    /target/release/dashboard
+    cargo run
 }
 
 function build {
