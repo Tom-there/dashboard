@@ -36,7 +36,7 @@ function fetchGit {
         echo 'Fast-forward not possible. Rebasing...'
         git rebase --preserve-merges --stat $remote_branch
     fi
-    var = 1
+    $var = 1
 }
 
 echo "currently in $pwd"
