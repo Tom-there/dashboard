@@ -2,8 +2,9 @@
 
 function run {
 
-    if [ -n '$1' ]then;
-    build
+    if [ -n '$1' ]
+    then
+        build
     fi
     echo 'running'
     cargo run
