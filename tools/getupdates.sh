@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-##pwd
+pwd
 ##if [[ 'git status --procelain --untracked-files=no' ]]
 ##then
 ##  echo changes upstream
