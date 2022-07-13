@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function run{
+function run {
     echo 'running'
 }
 
