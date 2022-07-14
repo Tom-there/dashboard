@@ -10,14 +10,8 @@ git fetch $remote
 
 if git merge-base --is-ancestor $remote_branch HEAD; then
     echo 'Already up-to-date'
-    if [-a target/release/dashboard]; then
-        echo "now running"
-        target/release/dashboard
-    else
-        echo "now compiling"
-        cargo build --release
-        target/release/dashboard
-    fi
+    echo "now running"
+    target/release/dashboard
     exit 0
 fi
 
