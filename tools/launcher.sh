@@ -20,6 +20,7 @@ else
     git rebase --preserve-merges --stat $remote_branch
 fi
     if [-a target/release/dashboard]; then
+        echo "now running"
         target/release/dashboard
     else
         echo "now building"
