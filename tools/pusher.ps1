@@ -1,3 +1,3 @@
 git add -A
-git commit -m"test"
+git commit -m"$args[0]"
 git push
