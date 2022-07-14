@@ -14,7 +14,7 @@ if git merge-base --is-ancestor $remote_branch HEAD; then
         echo "now running"
         target/release/dashboard
     else
-        echo "now building"
+        echo "now compiling"
         cargo build --release
         target/release/dashboard
     fi
