@@ -1,4 +1,4 @@
 
 fn main() {
-    println!("");
+    println!("{}yeet", color:Bg(color:Green));
 }
