@@ -10,6 +10,15 @@ git fetch $remote
 
 if git merge-base --is-ancestor $remote_branch HEAD; then
     echo 'Already up-to-date'
+    if [-a target/release/dashboard]; then
+        echo "now running"
+        target/release/dashboard
+    else
+        echo "now building"
+        cargo build --release
+        target/release/dashboard
+    fi
+    exit 0
 fi
 
 if git merge-base --is-ancestor HEAD $remote_branch; then
@@ -19,13 +28,10 @@ else
     echo 'Fast-forward not possible. Rebasing...'
     git rebase --preserve-merges --stat $remote_branch
 fi
-    if [-a target/release/dashboard]; then
-        echo "now running"
-        target/release/dashboard
-    else
-        echo "now building"
-        cargo build --release
-        target/release/dashboard
-    fi
+    
+    echo "now building"
+    cargo build --release
+    target/release/dashboard
+    
 
 exit 0
