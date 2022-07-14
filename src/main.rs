@@ -2,5 +2,5 @@ use termion::{color, style};
 use std::io;
 
 fn main() {
-    println!("{}yeet", color::Bg(color::Green));
+    println!("{}{}Stuff}", termion::clear::All, termion::cursor::Goto(1, 1));
 }
