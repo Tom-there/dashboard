@@ -1,4 +1,4 @@
-Write-Host "$args[0]"
+Write-Host "$args"
 git add -A
-git commit -m"$args[0]"
+git commit -m"$args"
 git push
