@@ -1,4 +1,6 @@
+use termion::{color, style};
+use std::io;
 
 fn main() {
-    println!("{}yeet", color::Fg(color::Green));
+    println!("{}yeet", color::Bg(color::Green));
 }
